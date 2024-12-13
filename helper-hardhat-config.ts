@@ -3,6 +3,7 @@ import {
   eEthereumNetwork,
   eOptimismNetwork,
   ePolygonNetwork,
+  eSwellchainNetwork,
   eXDaiNetwork,
   iParamsPerNetwork,
 } from './helpers/types';
@@ -31,4 +32,6 @@ export const NETWORKS_RPC_URL: iParamsPerNetwork<string> = {
   [eArbitrumNetwork.arbitrumTestnet]: `https://sepolia-rollup.arbitrum.io/rpc`,
   [eOptimismNetwork.main]: `https://opt-mainnet.g.alchemy.com/v2/${ALCHEMY_KEY}`,
   [eOptimismNetwork.testnet]: "https://sepolia.optimism.io",
+  [eSwellchainNetwork.main]: "https://swell-mainnet.alt.technology",
+  [eSwellchainNetwork.testnet]: "https://swell-testnet.alt.technology",
 };

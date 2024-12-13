@@ -22,6 +22,7 @@ import {
   eEthereumNetwork,
   eNetwork,
   eOptimismNetwork,
+  eSwellchainNetwork,
   ePolygonNetwork,
   eXDaiNetwork,
 } from './helpers/types';
@@ -174,6 +175,8 @@ const hardhatConfig: HardhatUserConfig = {
         l1: 'sepolia',
       },
     },
+    [eSwellchainNetwork.main]: getCommonNetworkConfig(eSwellchainNetwork.main, 1923),
+    [eSwellchainNetwork.testnet]: getCommonNetworkConfig(eSwellchainNetwork.testnet, 1924),
     hardhat: {
       accounts: accounts.map(({ secretKey, balance }: { secretKey: string; balance: string }) => ({
         privateKey: secretKey,
