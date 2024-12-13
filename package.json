@@ -34,7 +34,9 @@
     "deploy:optimism:testnet": "hardhat --network optimisticSepolia deploy --tags 'OptimisticGov'",
     "deploy:optimism:mainnet": "hardhat --network optimism deploy --tags 'OptimisticGov'",
     "deploy:arbitrum:testnet": "hardhat --network arbitrum-testnet deploy --tags 'ArbitrumGov'",
-    "deploy:arbitrum:mainnet": "hardhat --network arbitrum deploy --tags 'ArbitrumGov'"
+    "deploy:arbitrum:mainnet": "hardhat --network arbitrum deploy --tags 'ArbitrumGov'",
+    "deploy:swellchain:testnet": "hardhat --network swell_testnet deploy --tags 'SwellchainOptimisticGov'",
+    "deploy:swellchain:mainnet": "hardhat --network swellchain deploy --tags 'SwellchainOptimisticGov'"
   },
   "devDependencies": {
     "@aave/governance-v2": "^1.0.0",

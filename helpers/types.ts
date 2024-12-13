@@ -7,7 +7,8 @@ export type eNetwork =
   | ePolygonNetwork
   | eXDaiNetwork
   | eArbitrumNetwork
-  | eOptimismNetwork;
+  | eOptimismNetwork
+  | eSwellchainNetwork;
 
 export enum eEthereumNetwork {
   goerli = 'goerli',
@@ -21,6 +22,11 @@ export enum eEthereumNetwork {
 export enum ePolygonNetwork {
   matic = 'matic',
   mumbai = 'mumbai',
+}
+
+export enum eSwellchainNetwork {
+  main = 'swellchain',
+  testnet = 'swell_testnet',
 }
 
 export enum eXDaiNetwork {
@@ -53,7 +59,8 @@ export type iParamsPerNetwork<T> =
   | iPolygonParamsPerNetwork<T>
   | iXDaiParamsPerNetwork<T>
   | iArbitrumParamsPerNetwork<T>
-  | iOptimismParamsPerNetwork<T>;
+  | iOptimismParamsPerNetwork<T>
+  | iSwellchainParamsPerNetwork<T>;
 
 export interface iParamsPerNetworkAll<T>
   extends iEthereumParamsPerNetwork<T>,
@@ -86,6 +93,11 @@ export interface iArbitrumParamsPerNetwork<T> {
 export interface iOptimismParamsPerNetwork<T> {
   [eOptimismNetwork.main]: T;
   [eOptimismNetwork.testnet]: T;
+}
+
+export interface iSwellchainParamsPerNetwork<T> {
+  [eSwellchainNetwork.main]: T;
+  [eSwellchainNetwork.testnet]: T;
 }
 
 export interface ObjectString {
